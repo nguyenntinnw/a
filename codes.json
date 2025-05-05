@@ -1,0 +1,36 @@
+{
+  "1": {
+    "code": "0250CC",
+    "fullName": "a",
+    "age": "1",
+    "email": "nguyenntinn.w@gmail.com",
+    "playTime": "a",
+    "purpose": "a",
+    "gay": "",
+    "used": false
+  },
+  "exampleDiscordId": {
+    "code": "EXAMPLE123",
+    "used": false
+  },
+  "ád": {
+    "code": "676645",
+    "fullName": "Nguyênn Tínn",
+    "age": "13",
+    "email": "nguyenntinn.w@gmail.com",
+    "playTime": "19 housr",
+    "purpose": "gay",
+    "gay": "no",
+    "used": false
+  },
+  "a": {
+    "code": "A2E6E1",
+    "fullName": "a",
+    "age": "2",
+    "email": "nguyenntinn.w@gmail.com",
+    "playTime": "a",
+    "purpose": "a",
+    "gay": "no",
+    "used": false
+  }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stellar - Apply</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 15px;
+      padding: 30px 25px 40px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 0.8s ease forwards;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0; 
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+      animation: logoGlow 2.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes logoGlow {
+      0% { filter: drop-shadow(0 0 4px #fa57c1);}
+      100% { filter: drop-shadow(0 0 15px #ff4081);}
+    }
+
+    h1 {
+      color: #6a1b9a;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 3px #ce93d8;
+      margin-bottom: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #7b1fa2;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      background: #f8f1fb;
+      transition: all 0.3s ease;
+      font-size: 15px;
+      box-shadow: 2px 2px 5px rgba(183, 134, 233, 0.3);
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus {
+      border-color: #ba68c8;
+      background: #fff;
+      box-shadow: 0 0 10px 3px #ce93d8;
+      outline: none;
+      transform: scale(1.02);
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      accent-color: #ab47bc;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .checkbox-group input[type="checkbox"]:hover {
+      transform: scale(1.2);
+    }
+
+    .checkbox-group label {
+      cursor: pointer;
+      font-weight: 600;
+      color: #7b1fa2;
+      font-size: 14px;
+      text-transform: none;
+    }
+
+    button {
+      padding: 15px 20px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #ab47bc, #8e24aa);
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 5px 12px rgba(171, 71, 188, 0.6);
+      transition: all 0.35s ease;
+      letter-spacing: 1.5px;
+      user-select: none;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: linear-gradient(45deg, #8e24aa, #ab47bc);
+      box-shadow: 0 6px 15px rgba(171, 71, 188, 0.9);
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      color: #ba68c8;
+      font-weight: 600;
+      font-size: 13px;
+      margin-top: 28px;
+      user-select: none;
+      letter-spacing: 1px;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .container {
+        margin: 20px;
+        padding: 25px 20px 35px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" role="main">
+    <header>
+      <img src="https://media.discordapp.net/attachments/1368667296951701584/1368680917706604625/minecraft_title.png?ex=68191aef&is=6817c96f&hm=78587860ed446cf4bd6601faf128efb268d3bbfb1e775f086bad2b2952d49605&=&format=webp&quality=lossless&width=1327&height=180" alt="Minecraft Server Logo" width="300" />
+      <h1>Aplly The Server</h1>
+    </header>
+
+    <form action="/register" method="POST" novalidate>
+      <label for="fullName">Name</label>
+      <input type="text" id="fullName" name="fullName" required autocomplete="name" placeholder="ur name" />
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" required min="10" max="120" placeholder="ur age" />
+
+      <label for="discordId">ID Discord</label>
+      <input type="text" id="discordId" name="discordId" required autocomplete="off" placeholder="example: lowiihandsome" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required autocomplete="email" placeholder="ur email" />
+
+      <label for="playTime">how u have a many time to play?</label>
+      <input type="text" id="playTime" name="playTime" required placeholder="example: 99 days" />
+
+      <label for="purpose">why u joining?</label>
+      <input type="text" id="purpose" name="purpose" required placeholder="ur gay" />
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="rules" name="rules" required />
+        <label for="rules">Remember to follow the server rules</label>
+      </div>
+
+      <label for="gay">Are ur gay? (Options)</label>
+      <input type="text" id="gay" name="gay" placeholder="yess im gay" />
+
+      <button type="submit" aria-label="Gửi đăng ký server">Apply</button>
+    </form>
+
+    <footer>
+      &copy; Server Registration 2025. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Đăng Ký Thành Công</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    background: #ffffffcc;
+    max-width: 350px;
+    max-height: 600px;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 25px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 25px;
+    text-align: center;
+    backdrop-filter: saturate(180%) blur(15px);
+  }
+  .logo {
+    max-width: 280px;
+    width: 90%;
+    height: auto;
+    margin-bottom: 40px;
+    user-select: none;
+    pointer-events: none;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  button {
+    background: linear-gradient(45deg, #11998e, #38ef7d);
+    border: none;
+    padding: 16px 48px;
+    border-radius: 32px;
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.35s ease, transform 0.25s ease;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0 6px 14px rgba(20,150,120,0.45);
+  }
+  button:hover,
+  button:focus {
+    background: linear-gradient(45deg, #0e7f6d, #2bbe56);
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(15,130,100,0.65);
+  }
+  @media (max-width: 400px) {
+    .container {
+      height: auto;
+      max-height: none;
+      padding: 30px 15px;
+    }
+    h1 {
+      font-size: 2.4rem;
+    }
+    button {
+      padding: 14px 36px;
+      font-size: 1.05rem;
+      max-width: 100%;
+    }
+    .logo {
+      max-width: 90%;
+      margin-bottom: 30px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="YOU GAY">
+    <img class="logo" src="https://media.discordapp.net/attachments/1368667296951701584/1368680917706604625/minecraft_title.png?ex=68191aef&is=6817c96f&hm=78587860ed446cf4bd6601faf128efb268d3bbfb1e775f086bad2b2952d49605&=&format=webp&quality=lossless&width=1327&height=180" alt="Logo" />
+    <h1>DONE</h1>
+    <p>WAITING FOR DISCORD</p>
+    <button onclick="location.href='/'" aria-label="Quay về trang chủ">BACK HOME</button>
+  </div>
+</body>
+</html>
+
